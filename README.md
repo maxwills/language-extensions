@@ -15,3 +15,8 @@ LanguageExtensions installLanguageExtensions
 ```
 
 It will override some methods that will allow the AutoProperty traits to work.
+
+
+## Known issues:
+
+To be Fixed asap: The current code compilation to generate the traits does dont includes package info, and browsing code will throw an exeception.
