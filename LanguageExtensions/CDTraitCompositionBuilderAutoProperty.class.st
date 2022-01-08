@@ -14,6 +14,8 @@ CDTraitCompositionBuilderAutoProperty >> isAutoPropertyDeclarationMessageNode: a
 { #category : #visiting }
 CDTraitCompositionBuilderAutoProperty >> visitMessageNode: aRBMessageNode [
 
+	"Overrides the base method so it can support AutoProperty expression messages"
+
 	| receiver traitCompNode |
 	(self isAutoPropertyDeclarationMessageNode: aRBMessageNode) ifFalse: [ 
 		^ super visitMessageNode: aRBMessageNode ].
