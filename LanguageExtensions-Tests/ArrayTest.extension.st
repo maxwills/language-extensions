@@ -34,5 +34,8 @@ ArrayTest >> testLessThanLessThan [
    { a . b . c } << (self returnTestSequenceOfLengh: 3).
 	self assert: a equals: 1.
 	self assert: b equals: 2.
-	self assert: c equals: 3
+	self assert: c equals: 3.
+	
+   "Number of arguments should match"
+	self should: [ { a . b . c } << { nil. nil. nil .nil}. ] raise: Exception
 ]
