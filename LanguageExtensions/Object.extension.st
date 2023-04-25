@@ -1,6 +1,24 @@
 Extension { #name : #Object }
 
 { #category : #'*LanguageExtensions' }
+Object >> asRef [
+
+	| ctx var messageNode |
+	ctx := thisContext sender.
+	messageNode := ctx method sourceNodeForPC: ctx pc - 1.
+	var := messageNode receiver. "this is a node"
+	var isVariable ifFalse: [
+		^ self error: '#asRef can only be used on writable variables' ].
+	var := var variable. "This is a variable"
+	var isSelfVariable ifTrue: [
+		^ self error: '#asRef can only be used on writable variables' ].
+	^ Ref new
+		  var: var;
+		  context: ctx;
+		  yourself
+]
+
+{ #category : #'*LanguageExtensions' }
 Object >> switch [
 
 	| switchBlock found foundVal |
