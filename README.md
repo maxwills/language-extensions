@@ -44,8 +44,6 @@ MyObject>> #myMethod: outVar1
   outVar1 << 'setByMyMethod'.
   
 "IV. #switch. A clean switch-case notation that uses cascade."
-"cases expressions and do are evaluated one after the other until finding the matching case.
-The switch condition (receiver of the #switch method call) is evaluated on every case, until finding the matching one."
 | res |
 res := 1 switch
   case: 1 do: [ #one ];
@@ -59,6 +57,8 @@ res := true switch
   case: [ 1 < 2 ] do: [ #two ];
   defaultCase: #three.
 self assert: res = #two.
+"cases expressions and do are evaluated one after the other until finding the matching case.
+The switch condition (receiver of the #switch method call) is evaluated on every case, until finding the matching one."
 ```
 
 ## Obsolete info (Ignore from this point and forth)
