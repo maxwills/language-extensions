@@ -32,7 +32,7 @@ self assert: a equals:1.
 "we pass the a variable as reference"
 block value: a asRef.
 self assert: a equals: 99.
-"A Ref can be derefferenced by using the #value or #deRef method"
+"A Ref can be dereferenced by using the #value or #deRef method"
 a asRef deref "returns the value of a, 99".
 
 "#asRef enables outgoing(or whatever they are called"
