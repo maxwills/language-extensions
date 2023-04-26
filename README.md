@@ -18,7 +18,7 @@ a += 1.
 
 "II. #<< (unpacking operator)"
 |a b|
-{a . b . _ } << { 10. 20 . 30}.
+{a . b . nil } << { 10. 20 . 30}.
 "can also be used directly with method calls return"
 "{a . b . _ } << anObject aMethodThatReturnsAnArrayOf3Objects"
 "a value is 10, b value is 20"
