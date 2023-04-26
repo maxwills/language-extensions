@@ -28,10 +28,12 @@ a += 1.
 |a block|
 a := 1.
 block := [:r| r << 99 "we assign this value to the variable referenced by r"].
-self assert: a value equals:1.
+self assert: a equals:1.
 "we pass the a variable as reference"
 block value: a asRef.
-self assert: a value equals: 99.
+self assert: a equals: 99.
+"A Ref can be derefferenced by using the #value or #deRef method"
+a asRef deref "returns the value of a, 99".
 
 "#asRef enables outgoing(or whatever they are called"
 |a|
