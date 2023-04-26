@@ -8,7 +8,7 @@ Metacello new
     load.
 ```
 
-Currently adds
+Currently adds 4 operators.
 
 ```Smalltalk
 "I. #+= operator"
