@@ -1,5 +1,5 @@
 # language-extensions
-A set of new language features for Pharo 9.0-10
+A set of new language features for Pharo 9.0, 10, 11 and 12
 
 ```Smalltalk
 Metacello new
