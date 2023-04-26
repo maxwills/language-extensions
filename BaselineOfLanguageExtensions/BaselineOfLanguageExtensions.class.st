@@ -18,7 +18,10 @@ BaselineOfLanguageExtensions >> baseline: spec [
 
 { #category : #actions }
 BaselineOfLanguageExtensions >> postload: loader package: packageSpec [
+	" Old code. Required for using autoproperties which are discontinued."
 
-	(self class environment at: #LanguageExtensions)
-		installLanguageExtensions
+	"(self class environment at: #LanguageExtensions)
+		installLanguageExtensions"
+
+	
 ]

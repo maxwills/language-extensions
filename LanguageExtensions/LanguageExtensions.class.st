@@ -8,7 +8,7 @@ Class {
 LanguageExtensions class >> installLanguageExtensions [
 
 	"Install patches that prevent bugs related to the extensions"
-
+	"Call this only if using AutoProperties"
 	<script>
 	| authorName classToPatch1 classToPatch2 |
 	authorName := Author uniqueInstance fullNamePerSe.
