@@ -18,7 +18,7 @@ String >> autoFormat [
 						  | expression val |
 						  expression := stream upTo: $}.
 						  val := [ "try reading variable"
-						         ctx readVariableNamed: expression asSymbol ]
+						         ctx readAnyVariableNamed: expression asSymbol ]
 							         onErrorDo: [
 								         [ "try compiling"
 								         (compiler
